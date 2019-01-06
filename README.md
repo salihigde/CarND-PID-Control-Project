@@ -1,3 +1,23 @@
+# CarND PID Control Project
+
+## Describe the effect each of the P, I, D components had in your implementation.
+* P (Propotional): Has the most effect on car's behavior. Car will steer in proportion to CTE. Simply CTE defines car distance from the middle line of the road. When we use only P when car is getting further from right/left it steers to the left/right. 
+* D (Differential): It helps to reduce overshooting and makes car to reduce error more smoothly.
+* I (Integral): Sums up all the CTEs from start to current time. It deals with systematic biases.
+
+## Describe how the final hyperparameters were chosen.
+All the parameters has been chosen by manual trials. I first started by setting D and I to 0.0 and increasing P until car has a lot of oscillations. And I tuned D to reduce oscillations. Finally I played with I (Integral component) value and found out that when it gets bigger the car gets more unstable. Thats why I assigned a very small value to I (Integral component).
+
+I found following values for P, I and D:
+
+P = 0.20
+I = 0.001
+D = 4.1
+
+## Video
+
+Video can be found [here](./video/demo_vid.mov)
+
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
