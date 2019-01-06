@@ -1,4 +1,4 @@
-# CarND PID Control Project
+# Car-ND PID Control Project
 
 ## Describe the effect each of the P, I, D components had in your implementation.
 * P (Propotional): Has the most effect on car's behavior. Car will steer in proportion to CTE. Simply CTE defines car distance from the middle line of the road. When we use only P when car is getting further from right/left it steers to the left/right. 
@@ -10,9 +10,9 @@ All the parameters has been chosen by manual trials. I first started by setting 
 
 I found following values for P, I and D:
 
-P = 0.20
-I = 0.001
-D = 4.1
+* P = 0.20
+* I = 0.001
+* D = 4.1
 
 ## Video
 
